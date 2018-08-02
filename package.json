@@ -5,6 +5,7 @@
   "description": "A well tested, feature rich Firebase implementation for React Native, supporting iOS & Android. Individual module support for Admob, Analytics, Auth, Crash Reporting, Cloud Firestore, Database, Dynamic Links, Functions, Messaging (FCM), Remote Config, Storage and more.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "http://invertase.io/react-native-firebase",
   "scripts": {
     "build": "genversion lib/version.js && npm run validate-ts-declarations && npm run build-lib && npm run build-flow",
     "build-flow": "flow-copy-source -i */__tests__* lib dist",
