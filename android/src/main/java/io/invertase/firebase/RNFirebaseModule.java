@@ -51,7 +51,11 @@ public class RNFirebaseModule extends ReactContextBaseJavaModule {
     builder.setGcmSenderId(options.getString("messagingSenderId"));
     // todo firebase sdk has no client id setter
 
-    FirebaseApp.initializeApp(getReactApplicationContext(), builder.build(), appName);
+    if (appName == null || appName == "" || appName == "[DEFAULT]" || appName == "__FIRAPP_DEFAULT") {
+      FirebaseApp.initializeApp(getReactApplicationContext(), builder.build());
+    } else {
+      FirebaseApp.initializeApp(getReactApplicationContext(), builder.build(), appName);
+    }
 
     WritableMap response = Arguments.createMap();
     response.putString("result", "success");

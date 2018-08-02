@@ -2,9 +2,6 @@
 
 @implementation RNFirebaseUtil
 
-static NSString *const DEFAULT_APP_DISPLAY_NAME = @"[DEFAULT]";
-static NSString *const DEFAULT_APP_NAME = @"__FIRAPP_DEFAULT";
-
 + (FIRApp *)getApp:(NSString *)appDisplayName {
     NSString *appName = [RNFirebaseUtil getAppName:appDisplayName];
     return [FIRApp appNamed:appName];

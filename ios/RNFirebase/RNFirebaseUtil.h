@@ -5,6 +5,9 @@
 #import <React/RCTEventEmitter.h>
 #import <Firebase.h>
 
+static NSString *const DEFAULT_APP_DISPLAY_NAME = @"[DEFAULT]";
+static NSString *const DEFAULT_APP_NAME = @"__FIRAPP_DEFAULT";
+
 @interface RNFirebaseUtil : NSObject
 
 + (FIRApp *)getApp:(NSString *)appDisplayName;
